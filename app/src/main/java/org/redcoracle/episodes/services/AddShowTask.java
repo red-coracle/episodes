@@ -1,4 +1,4 @@
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -10,14 +10,14 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.jamienicol.episodes.EpisodesApplication;
-import org.jamienicol.episodes.R;
-import org.jamienicol.episodes.db.EpisodesTable;
-import org.jamienicol.episodes.db.ShowsProvider;
-import org.jamienicol.episodes.db.ShowsTable;
-import org.jamienicol.episodes.tvdb.Client;
-import org.jamienicol.episodes.tvdb.Episode;
-import org.jamienicol.episodes.tvdb.Show;
+import org.redcoracle.episodes.EpisodesApplication;
+import org.redcoracle.episodes.R;
+import org.redcoracle.episodes.db.EpisodesTable;
+import org.redcoracle.episodes.db.ShowsProvider;
+import org.redcoracle.episodes.db.ShowsTable;
+import org.redcoracle.episodes.tvdb.Client;
+import org.redcoracle.episodes.tvdb.Episode;
+import org.redcoracle.episodes.tvdb.Show;
 
 import java.util.concurrent.Callable;
 

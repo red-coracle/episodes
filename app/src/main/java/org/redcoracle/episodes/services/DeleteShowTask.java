@@ -1,13 +1,13 @@
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
 
-import org.jamienicol.episodes.EpisodesApplication;
-import org.jamienicol.episodes.db.EpisodesTable;
-import org.jamienicol.episodes.db.ShowsProvider;
+import org.redcoracle.episodes.EpisodesApplication;
+import org.redcoracle.episodes.db.EpisodesTable;
+import org.redcoracle.episodes.db.ShowsProvider;
 
 import java.util.concurrent.Callable;
 

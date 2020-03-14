@@ -15,11 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import android.app.IntentService;
 import android.content.Intent;
-import org.jamienicol.episodes.RefreshShowUtil;
+import org.redcoracle.episodes.RefreshShowUtil;
 
 public class RefreshShowService extends IntentService
 {

@@ -1,4 +1,4 @@
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import android.content.Context;
 import android.os.Environment;
@@ -6,9 +6,9 @@ import android.util.Log;
 
 import com.bumptech.glide.Glide;
 
-import org.jamienicol.episodes.EpisodesApplication;
-import org.jamienicol.episodes.db.DatabaseOpenHelper;
-import org.jamienicol.episodes.db.ShowsProvider;
+import org.redcoracle.episodes.EpisodesApplication;
+import org.redcoracle.episodes.db.DatabaseOpenHelper;
+import org.redcoracle.episodes.db.ShowsProvider;
 
 import java.io.File;
 import java.io.FileInputStream;

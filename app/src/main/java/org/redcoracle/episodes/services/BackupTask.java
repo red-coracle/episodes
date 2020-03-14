@@ -1,11 +1,11 @@
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-import org.jamienicol.episodes.EpisodesApplication;
-import org.jamienicol.episodes.db.DatabaseOpenHelper;
+import org.redcoracle.episodes.EpisodesApplication;
+import org.redcoracle.episodes.db.DatabaseOpenHelper;
 
 import java.io.File;
 import java.io.FileInputStream;

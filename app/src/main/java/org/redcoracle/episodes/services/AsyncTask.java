@@ -1,4 +1,4 @@
-package org.jamienicol.episodes.services;
+package org.redcoracle.episodes.services;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;

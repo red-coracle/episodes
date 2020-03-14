@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.jamienicol.episodes.db;
+package org.redcoracle.episodes.db;
 
 import android.content.ContentProvider;
 import android.content.ContentProviderClient;
@@ -30,7 +30,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import androidx.annotation.NonNull;
 import android.util.Log;
-import org.jamienicol.episodes.BuildConfig;
+import org.redcoracle.episodes.BuildConfig;
 
 public class ShowsProvider extends ContentProvider
 {
