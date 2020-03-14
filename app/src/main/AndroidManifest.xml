@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.jamienicol.episodes">
+    package="org.redcoracle.episodes">
 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.INTERNET"/>
@@ -9,14 +9,14 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
   <application
-      android:name=".EpisodesApplication"
+      android:name="org.redcoracle.episodes.EpisodesApplication"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/Theme.Episodes"
       android:allowBackup="true">
 
     <activity
-        android:name=".MainActivity"
+        android:name="org.redcoracle.episodes.MainActivity"
         android:label="@string/app_name"
         android:launchMode="singleTop">
       <intent-filter>
@@ -26,51 +26,51 @@
     </activity>
 
     <activity
-        android:name=".SettingsActivity"
+        android:name="org.redcoracle.episodes.SettingsActivity"
         android:label="@string/settings_title"
-        android:parentActivityName=".MainActivity">
+        android:parentActivityName="org.redcoracle.episodes.MainActivity">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
-          android:value=".MainActivity"/>
+          android:value="org.redcoracle.episodes.MainActivity"/>
     </activity>
 
     <activity
-        android:name=".AboutActivity"
+        android:name="org.redcoracle.episodes.AboutActivity"
         android:label="@string/about_title" >
     </activity>
 
     <activity
-        android:name=".AddShowSearchActivity"
+        android:name="org.redcoracle.episodes.AddShowSearchActivity"
         android:label="" >
     </activity>
 
     <activity
-        android:name=".AddShowPreviewActivity"
+        android:name="org.redcoracle.episodes.AddShowPreviewActivity"
         android:label="" >
     </activity>
 
     <activity
-        android:name=".ShowActivity"
+        android:name="org.redcoracle.episodes.ShowActivity"
         android:label=""
         android:theme="@style/Theme.Episodes.NoActionBar">
     </activity>
 
     <activity
-        android:name=".SeasonActivity"
+        android:name="org.redcoracle.episodes.SeasonActivity"
         android:label="" >
     </activity>
 
     <activity
-        android:name=".EpisodeActivity"
+        android:name="org.redcoracle.episodes.EpisodeActivity"
         android:label="" >
     </activity>
 
     <service
-        android:name=".AutoRefreshHelper$Service" >
+        android:name="org.redcoracle.episodes.AutoRefreshHelper$Service" >
     </service>
 
     <receiver
-        android:name=".AutoRefreshHelper$BootReceiver"
+        android:name="org.redcoracle.episodes.AutoRefreshHelper$BootReceiver"
         android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -78,7 +78,7 @@
     </receiver>
 
     <receiver
-        android:name=".AutoRefreshHelper$NetworkStateReceiver"
+        android:name="org.redcoracle.episodes.AutoRefreshHelper$NetworkStateReceiver"
         android:exported="true"
         android:enabled="false">
       <intent-filter>
@@ -87,7 +87,7 @@
     </receiver>
 
     <provider
-        android:name=".db.ShowsProvider"
+        android:name="org.redcoracle.episodes.db.ShowsProvider"
         android:authorities="${applicationId}.db.ShowsProvider"
         android:exported="false" >
     </provider>
