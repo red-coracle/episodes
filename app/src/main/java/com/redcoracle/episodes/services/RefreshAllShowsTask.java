@@ -1,4 +1,4 @@
-package org.redcoracle.episodes.services;
+package com.redcoracle.episodes.services;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -8,14 +8,14 @@ import android.net.Uri;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import org.redcoracle.episodes.EpisodesApplication;
-import org.redcoracle.episodes.R;
-import org.redcoracle.episodes.db.ShowsProvider;
-import org.redcoracle.episodes.db.ShowsTable;
+import com.redcoracle.episodes.EpisodesApplication;
+import com.redcoracle.episodes.R;
+import com.redcoracle.episodes.db.ShowsProvider;
+import com.redcoracle.episodes.db.ShowsTable;
 
 import java.util.concurrent.Callable;
 
-import static org.redcoracle.episodes.RefreshShowUtil.refreshShow;
+import static com.redcoracle.episodes.RefreshShowUtil.refreshShow;
 
 public class RefreshAllShowsTask implements Callable<Void> {
     @Override

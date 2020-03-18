@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.redcoracle.episodes.db;
+package com.redcoracle.episodes.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

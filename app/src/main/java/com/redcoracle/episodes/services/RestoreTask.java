@@ -1,4 +1,4 @@
-package org.redcoracle.episodes.services;
+package com.redcoracle.episodes.services;
 
 import android.content.Context;
 import android.os.Environment;
@@ -6,9 +6,9 @@ import android.util.Log;
 
 import com.bumptech.glide.Glide;
 
-import org.redcoracle.episodes.EpisodesApplication;
-import org.redcoracle.episodes.db.DatabaseOpenHelper;
-import org.redcoracle.episodes.db.ShowsProvider;
+import com.redcoracle.episodes.EpisodesApplication;
+import com.redcoracle.episodes.db.DatabaseOpenHelper;
+import com.redcoracle.episodes.db.ShowsProvider;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,13 +1,13 @@
-package org.redcoracle.episodes.services;
+package com.redcoracle.episodes.services;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
 
-import org.redcoracle.episodes.EpisodesApplication;
-import org.redcoracle.episodes.db.EpisodesTable;
-import org.redcoracle.episodes.db.ShowsProvider;
+import com.redcoracle.episodes.EpisodesApplication;
+import com.redcoracle.episodes.db.EpisodesTable;
+import com.redcoracle.episodes.db.ShowsProvider;
 
 import java.util.concurrent.Callable;
 

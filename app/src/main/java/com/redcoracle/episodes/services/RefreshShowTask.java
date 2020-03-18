@@ -1,9 +1,9 @@
-package org.redcoracle.episodes.services;
+package com.redcoracle.episodes.services;
 
 import android.content.Context;
 
-import org.redcoracle.episodes.EpisodesApplication;
-import org.redcoracle.episodes.RefreshShowUtil;
+import com.redcoracle.episodes.EpisodesApplication;
+import com.redcoracle.episodes.RefreshShowUtil;
 
 import java.util.concurrent.Callable;
 
