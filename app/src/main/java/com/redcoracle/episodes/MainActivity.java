@@ -23,22 +23,21 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.MenuItemCompat;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.MenuItemCompat;
+import androidx.fragment.app.FragmentManager;
+
 import com.redcoracle.episodes.services.AsyncTask;
 import com.redcoracle.episodes.services.BackupTask;
 import com.redcoracle.episodes.services.RestoreTask;
-
-import com.redcoracle.episodes.R;
 
 public class MainActivity
     extends AppCompatActivity

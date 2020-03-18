@@ -20,6 +20,9 @@ package com.redcoracle.episodes;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -27,13 +30,9 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
 
 import com.redcoracle.episodes.db.EpisodesTable;
 import com.redcoracle.episodes.db.ShowsProvider;
-
-import com.redcoracle.episodes.R;
 
 public class EpisodeActivity
 	extends AppCompatActivity

@@ -55,8 +55,6 @@ import com.redcoracle.episodes.db.ShowsTable;
 import com.redcoracle.episodes.services.AsyncTask;
 import com.redcoracle.episodes.services.RefreshAllShowsTask;
 
-import com.redcoracle.episodes.R;
-
 import java.util.ArrayList;
 import java.util.List;
 

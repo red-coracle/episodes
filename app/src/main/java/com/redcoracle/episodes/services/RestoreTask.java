@@ -5,7 +5,6 @@ import android.os.Environment;
 import android.util.Log;
 
 import com.bumptech.glide.Glide;
-
 import com.redcoracle.episodes.EpisodesApplication;
 import com.redcoracle.episodes.db.DatabaseOpenHelper;
 import com.redcoracle.episodes.db.ShowsProvider;

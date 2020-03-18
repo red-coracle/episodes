@@ -19,15 +19,14 @@ package com.redcoracle.episodes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.redcoracle.episodes.tvdb.Show;
 
 import java.util.List;
-
-import com.redcoracle.episodes.R;
 
 public class AddShowPreviewActivity
 	extends AppCompatActivity

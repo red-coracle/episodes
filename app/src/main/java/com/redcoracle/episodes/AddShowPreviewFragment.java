@@ -18,7 +18,6 @@
 package com.redcoracle.episodes;
 
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,6 +26,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import com.redcoracle.episodes.services.AddShowTask;
 import com.redcoracle.episodes.services.AsyncTask;
 import com.redcoracle.episodes.tvdb.Show;
@@ -34,8 +35,6 @@ import com.redcoracle.episodes.tvdb.Show;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
-
-import com.redcoracle.episodes.R;
 
 public class AddShowPreviewFragment
 	extends Fragment

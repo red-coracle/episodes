@@ -21,22 +21,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.redcoracle.episodes.db.EpisodesTable;
 import com.redcoracle.episodes.db.ShowsProvider;
-
-import com.redcoracle.episodes.R;
 
 public class SeasonsListFragment
 	extends Fragment

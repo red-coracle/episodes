@@ -28,6 +28,23 @@ import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
+import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -38,25 +55,6 @@ import com.redcoracle.episodes.db.ShowsTable;
 import com.redcoracle.episodes.services.AsyncTask;
 import com.redcoracle.episodes.services.DeleteShowTask;
 import com.redcoracle.episodes.services.RefreshShowTask;
-
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.redcoracle.episodes.R;
 
 public class ShowActivity
 	extends AppCompatActivity

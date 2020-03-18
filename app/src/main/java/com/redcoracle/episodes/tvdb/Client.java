@@ -19,12 +19,11 @@ package com.redcoracle.episodes.tvdb;
 
 import android.util.Log;
 
+import com.redcoracle.episodes.EpisodesApplication;
 import com.uwetrottmann.thetvdb.TheTvdb;
 import com.uwetrottmann.thetvdb.entities.EpisodesResponse;
 import com.uwetrottmann.thetvdb.entities.SeriesResponse;
 import com.uwetrottmann.thetvdb.entities.SeriesResultsResponse;
-
-import com.redcoracle.episodes.EpisodesApplication;
 
 import java.io.IOException;
 import java.net.URLEncoder;

@@ -19,12 +19,11 @@ package com.redcoracle.episodes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.Window;
 
-import com.redcoracle.episodes.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class AddShowSearchActivity
 	extends AppCompatActivity

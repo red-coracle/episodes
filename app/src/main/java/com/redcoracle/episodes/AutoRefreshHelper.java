@@ -31,8 +31,9 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceManager;
-import androidx.core.net.ConnectivityManagerCompat;
 import android.util.Log;
+
+import androidx.core.net.ConnectivityManagerCompat;
 
 import com.redcoracle.episodes.db.ShowsProvider;
 import com.redcoracle.episodes.db.ShowsTable;

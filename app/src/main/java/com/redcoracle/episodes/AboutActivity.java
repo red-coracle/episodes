@@ -18,10 +18,9 @@
 package com.redcoracle.episodes;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.redcoracle.episodes.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutActivity
 	extends AppCompatActivity

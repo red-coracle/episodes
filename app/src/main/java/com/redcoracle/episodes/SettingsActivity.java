@@ -18,9 +18,8 @@
 package com.redcoracle.episodes;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.redcoracle.episodes.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 	@Override

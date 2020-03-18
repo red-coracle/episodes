@@ -25,9 +25,6 @@ import android.util.Log;
 
 import com.uwetrottmann.thetvdb.TheTvdb;
 
-import com.redcoracle.episodes.BuildConfig;
-import com.redcoracle.episodes.R;
-
 public class EpisodesApplication extends Application {
 	private static final String TAG = EpisodesApplication.class.getName();
 	private static EpisodesApplication instance;

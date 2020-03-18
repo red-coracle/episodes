@@ -20,22 +20,21 @@ package com.redcoracle.episodes;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
 import com.redcoracle.episodes.db.ShowsProvider;
 import com.redcoracle.episodes.db.ShowsTable;
 
 import java.text.DateFormat;
 import java.util.Date;
-
-import com.redcoracle.episodes.R;
 
 public class ShowDetailsFragment
 	extends Fragment

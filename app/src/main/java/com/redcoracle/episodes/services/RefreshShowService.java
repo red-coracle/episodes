@@ -19,6 +19,7 @@ package com.redcoracle.episodes.services;
 
 import android.app.IntentService;
 import android.content.Intent;
+
 import com.redcoracle.episodes.RefreshShowUtil;
 
 public class RefreshShowService extends IntentService

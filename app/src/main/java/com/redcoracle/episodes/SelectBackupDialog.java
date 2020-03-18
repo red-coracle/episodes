@@ -26,8 +26,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-import com.redcoracle.episodes.R;
-
 import java.io.File;
 import java.util.Arrays;
 

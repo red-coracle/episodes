@@ -24,21 +24,20 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
+
 import com.redcoracle.episodes.db.EpisodesTable;
 import com.redcoracle.episodes.db.ShowsProvider;
 import com.redcoracle.episodes.db.ShowsTable;
-
-import com.redcoracle.episodes.R;
 
 public class SeasonActivity
 	extends AppCompatActivity

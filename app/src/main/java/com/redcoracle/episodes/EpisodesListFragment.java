@@ -25,11 +25,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.fragment.app.ListFragment;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
-import androidx.cursoradapter.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,13 +33,17 @@ import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.cursoradapter.widget.CursorAdapter;
+import androidx.fragment.app.ListFragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
+
 import com.redcoracle.episodes.db.EpisodesTable;
 import com.redcoracle.episodes.db.ShowsProvider;
 
 import java.text.DateFormat;
 import java.util.Date;
-
-import com.redcoracle.episodes.R;
 
 public class EpisodesListFragment
 	extends ListFragment

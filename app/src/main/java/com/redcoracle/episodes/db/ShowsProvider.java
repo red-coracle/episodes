@@ -28,8 +28,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import androidx.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.redcoracle.episodes.BuildConfig;
 
 public class ShowsProvider extends ContentProvider
