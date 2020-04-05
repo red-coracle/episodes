@@ -375,7 +375,7 @@ public class ShowsListFragment
 						final int idColumnIndexUpcoming = showsCursor.getColumnIndexOrThrow(ShowsTable.COLUMN_ID); //change to meaningful variable
 						final int idUpcoming = showsCursor.getInt(idColumnIndexUpcoming);
 
-						if((episodesCounter.getNumUpcomingEpisodes(idUpcoming) > 0) &&
+						if((episodesCounter.getNumUpcomingEpisodes(idUpcoming) > 0) && (episodesCounter.getNumWatchedEpisodes(idUpcoming) == episodesCounter.getNumAiredEpisodes(idUpcoming)) &&
 								showsCursor.getInt(showsCursor.getColumnIndexOrThrow(ShowsTable.COLUMN_ARCHIVED)) == 0)
 						{
 							filteredShows.add(showsCursor.getPosition());
