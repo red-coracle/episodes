@@ -30,7 +30,7 @@
       android:layout_height="32dp"
       android:layout_alignParentTop="true"
       android:layout_alignParentRight="true"
-      android:background="@drawable/white_gradient"
+      android:background="@drawable/white_gradient_reverse"
       android:focusable="false"
       android:foreground="@drawable/starred_toggle"
       android:textOff=""
