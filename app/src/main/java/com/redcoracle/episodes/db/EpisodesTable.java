@@ -41,30 +41,29 @@ public class EpisodesTable {
     public static final String COLUMN_WATCHED = "watched";
 
     public static void onCreate(SQLiteDatabase db) {
-        String create =
-                String.format("CREATE TABLE %s ("  +
-                                "    %s INTEGER PRIMARY KEY," +
-                                "    %s INTEGER UNIQUE NOT NULL," +
-                                "    %s INTEGER NOT NULL," +
-                                "    %s VARCHAR(200) NOT NULL," +
-                                "    %s TEXT," +
-                                "    %s TEXT," +
-                                "    %s INTEGER," +
-                                "    %s INTEGER," +
-                                "    %s DATE," +
-                                "    %s BOOLEAN" +
-                                ");",
-                                TABLE_NAME,
-                                COLUMN_ID,
-                                COLUMN_TVDB_ID,
-                                COLUMN_SHOW_ID,
-                                COLUMN_NAME,
-                                COLUMN_LANGUAGE,
-                                COLUMN_OVERVIEW,
-                                COLUMN_EPISODE_NUMBER,
-                                COLUMN_SEASON_NUMBER,
-                                COLUMN_FIRST_AIRED,
-                                COLUMN_WATCHED);
+        String create = String.format("CREATE TABLE %s ("  +
+                                      "%s INTEGER PRIMARY KEY," +
+                                      "%s INTEGER UNIQUE NOT NULL," +
+                                      "%s INTEGER NOT NULL," +
+                                      "%s VARCHAR(200) NOT NULL," +
+                                      "%s TEXT," +
+                                      "%s TEXT," +
+                                      "%s INTEGER," +
+                                      "%s INTEGER," +
+                                      "%s DATE," +
+                                      "%s BOOLEAN" +
+                                      ");",
+                                      TABLE_NAME,
+                                      COLUMN_ID,
+                                      COLUMN_TVDB_ID,
+                                      COLUMN_SHOW_ID,
+                                      COLUMN_NAME,
+                                      COLUMN_LANGUAGE,
+                                      COLUMN_OVERVIEW,
+                                      COLUMN_EPISODE_NUMBER,
+                                      COLUMN_SEASON_NUMBER,
+                                      COLUMN_FIRST_AIRED,
+                                      COLUMN_WATCHED);
 
         Log.d(TAG, String.format("creating episodes table: %s", create));
 
