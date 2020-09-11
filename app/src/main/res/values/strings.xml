@@ -37,7 +37,7 @@
   <string name="menu_unarchive_show">Remove show from archive</string>
   <string name="pref_auto_refresh_period_title">Interval</string>
   <string name="pref_auto_refresh_enabled_title">Auto-refresh on</string>
-  <string name="pref_auto_refresh_wifi_only_title">Only on unlimited Wi-Fi</string>
+  <string name="pref_auto_refresh_wifi_only_title">Only on unmetered connections</string>
   <string name="pref_language_title">Language</string>
   <string name="pref_reverse_sort_order">Reverse sorting order</string>
   <string name="pref_reverse_sort_order_summary">Displays the newest season first</string>
