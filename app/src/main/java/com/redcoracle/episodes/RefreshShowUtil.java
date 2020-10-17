@@ -43,11 +43,10 @@ public class RefreshShowUtil {
 		Log.i(TAG, String.format("Refreshing show %d", showId));
 
 		SharedPreferences preferences = Preferences.getSharedPreferences();
-		preferences.getString("pref_language", "en");
-
-		final int showTvdbId = getShowTvdbId(showId, contentResolver);
 		String showLanguage = preferences.getString("pref_language", "en");
+
 		// fetch full show + episode information from tvdb
+		final int showTvdbId = getShowTvdbId(showId, contentResolver);
 		final Show show = tvdbClient.getShow(showTvdbId, showLanguage);
 
 		if (show != null) {
