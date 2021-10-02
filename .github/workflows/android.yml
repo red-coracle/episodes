@@ -10,7 +10,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
-	  distribution: 'temurin'
+          distribution: 'temurin'
           java-version: '11'
       - name: Test with Gradle
         run: ./gradlew test
@@ -22,7 +22,7 @@ jobs:
     - name: Setup JDK
         uses: actions/setup-java@v2
         with:
-	  distribution: 'temurin'
+          distribution: 'temurin'
           java-version: '11'
     - name: Verify Gradle
       uses: gradle/wrapper-validation-action@v1
