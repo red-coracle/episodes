@@ -55,35 +55,26 @@ public class AddShowSearchFragment
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater,
-	                         ViewGroup container,
-	                         Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.add_show_search_fragment,
-		                        container,
-		                        false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.add_show_search_fragment, container, false);
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		// if the loader exists and it's busy loading
-		// then spin the progress bar.
-		Loader loader = getLoaderManager().getLoader(0);
-		if (loader != null && getActivity() != null) {
-			getActivity().setProgressBarIndeterminateVisibility(loader.isStarted());
-		}
-
 		String query = getArguments().getString("query");
 		Bundle loaderArgs = new Bundle();
 		loaderArgs.putString("query", query);
 
-		getLoaderManager().initLoader(0, loaderArgs, this);
+		LoaderManager.getInstance(this).initLoader(0, loaderArgs, this);
 	}
 
+	@NonNull
 	@Override
 	public Loader<List<Show>> onCreateLoader(int id, Bundle args) {
-		getActivity().setProgressBarIndeterminateVisibility(true);
+
+		getActivity().findViewById(R.id.search_progress_bar).setVisibility(View.VISIBLE);
 		getActivity().findViewById(R.id.search_no_results_found).setVisibility(View.GONE);
         return new SearchLoader(getActivity(), args.getString("query"));
 	}
@@ -94,8 +85,6 @@ public class AddShowSearchFragment
 		results.setData(data);
 
 		Activity activity = getActivity();
-		activity.setProgressBarIndeterminateVisibility(false);
-
 		SearchResultsAdapter adapter = null;
 
 		if (data != null) {
@@ -104,6 +93,7 @@ public class AddShowSearchFragment
 			}
 			adapter = new SearchResultsAdapter(activity, data);
 		}
+		activity.findViewById(R.id.search_progress_bar).setVisibility(View.GONE);
 		setListAdapter(adapter);
 	}
 
@@ -114,12 +104,10 @@ public class AddShowSearchFragment
 		setListAdapter(null);
 	}
 
-	private static class SearchLoader
-		extends AsyncTaskLoader<List<Show>>
-	{
+	private static class SearchLoader extends AsyncTaskLoader<List<Show>> {
 		private final String query;
 		private List<Show> cachedResult;
-		private SharedPreferences preferences = Preferences.getSharedPreferences();
+		private final SharedPreferences preferences = Preferences.getSharedPreferences();
 
 		SearchLoader(Context context, String query) {
 			super(context);
@@ -177,20 +165,16 @@ public class AddShowSearchFragment
 	}
 
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		Intent intent = new Intent(getActivity(),
-		                           AddShowPreviewActivity.class);
+		Intent intent = new Intent(getActivity(), AddShowPreviewActivity.class);
 		intent.putExtra("searchResultIndex", position);
 		startActivity(intent);
 	}
 
-	private static class SearchResultsAdapter
-		extends ArrayAdapter<Show>
-	{
-		private LayoutInflater inflater;
+	private static class SearchResultsAdapter extends ArrayAdapter<Show> {
+		private final LayoutInflater inflater;
 
 		SearchResultsAdapter(Context context, List<Show> objects) {
 			super(context, 0, 0, objects);
-
 			inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		}
 
@@ -198,10 +182,7 @@ public class AddShowSearchFragment
         @Override
 		public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 			if (convertView == null) {
-				convertView =
-					inflater.inflate(R.layout.add_show_search_results_list_item,
-					                 parent,
-					                 false);
+				convertView = inflater.inflate(R.layout.add_show_search_results_list_item, parent, false);
 			}
 
 			TextView textView = convertView.findViewById(R.id.show_name_view);
