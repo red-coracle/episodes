@@ -84,7 +84,7 @@ public class AddShowSearchFragment
 	@Override
 	public Loader<List<Show>> onCreateLoader(int id, Bundle args) {
 		getActivity().setProgressBarIndeterminateVisibility(true);
-
+		getActivity().findViewById(R.id.search_no_results_found).setVisibility(View.GONE);
         return new SearchLoader(getActivity(), args.getString("query"));
 	}
 
@@ -97,7 +97,11 @@ public class AddShowSearchFragment
 		activity.setProgressBarIndeterminateVisibility(false);
 
 		SearchResultsAdapter adapter = null;
+
 		if (data != null) {
+			if (data.size() == 0) {
+				activity.findViewById(R.id.search_no_results_found).setVisibility(View.VISIBLE);
+			}
 			adapter = new SearchResultsAdapter(activity, data);
 		}
 		setListAdapter(adapter);
@@ -107,7 +111,6 @@ public class AddShowSearchFragment
 	public void onLoaderReset(Loader<List<Show>> loader) {
 		AddShowSearchResults results = AddShowSearchResults.getInstance();
 		results.setData(null);
-
 		setListAdapter(null);
 	}
 

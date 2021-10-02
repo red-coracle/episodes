@@ -3,7 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+
+  <TextView
+      android:id="@+id/search_no_results_found"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/no_search_results_found"
+      android:textAlignment="center"
+      android:gravity="center_horizontal"
+      android:paddingTop="10dp"
+      android:textSize="20sp"/>
+
   <FrameLayout
       android:id="@+id/search_fragment_container"
       android:layout_width="match_parent"
