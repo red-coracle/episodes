@@ -3,8 +3,12 @@ package com.redcoracle.episodes.services;
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.redcoracle.episodes.EpisodesApplication;
+import com.redcoracle.episodes.R;
 import com.redcoracle.episodes.db.DatabaseOpenHelper;
 
 import java.io.File;
@@ -41,6 +45,11 @@ public class BackupTask implements Callable<Void> {
             FileChannel src = new FileInputStream(databaseFile).getChannel();
             FileChannel dest = new FileOutputStream(destinationFile).getChannel();
             dest.transferFrom(src, 0, src.size());
+            ContextCompat.getMainExecutor(this.context).execute(() -> Toast.makeText(
+                this.context,
+                String.format(this.context.getString(R.string.back_up_success_message), this.destinationFileName),
+                Toast.LENGTH_LONG
+            ).show());
             Log.i(TAG, String.format("Library backed up successfully: '%s'.", destinationFile.getPath()));
             src.close();
             dest.close();
