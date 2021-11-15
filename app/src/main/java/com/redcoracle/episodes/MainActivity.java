@@ -58,7 +58,7 @@ public class MainActivity
     private static final int WRITE_REQUEST_CODE = 0;
     private static final int READ_REQUEST_CODE = 1;
 
-	@Override
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
@@ -134,7 +134,7 @@ public class MainActivity
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-	    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     private boolean hasStoragePermission() {
@@ -161,6 +161,8 @@ public class MainActivity
             Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
             intent.setType("application/x-sqlite3");
+            // On API 31 the file was not selectable without this
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"application/octet-stream"});
             startActivityForResult(intent, READ_REQUEST_CODE);
         } else {
             // For now, keep the existing functionality on pre-API19
@@ -179,19 +181,19 @@ public class MainActivity
             if (requestCode == WRITE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
                 Uri uri = data.getData();
                 FileUtilities.copy_file(
-                        new FileInputStream(this.getDatabasePath(DatabaseOpenHelper.getDbName())).getChannel(),
-                        new FileOutputStream(getContentResolver().openFileDescriptor(uri, "w").getFileDescriptor()).getChannel()
+                    new FileInputStream(this.getDatabasePath(DatabaseOpenHelper.getDbName())).getChannel(),
+                    new FileOutputStream(getContentResolver().openFileDescriptor(uri, "w").getFileDescriptor()).getChannel()
                 );
                 Toast.makeText(
-                        this,
-                        String.format(this.getString(R.string.back_up_success_message), FileUtilities.uri_to_filename(this, uri)),
-                        Toast.LENGTH_LONG
+                    this,
+                    String.format(this.getString(R.string.back_up_success_message), FileUtilities.uri_to_filename(this, uri)),
+                    Toast.LENGTH_LONG
                 ).show();
             } else if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
                 Uri uri = data.getData();
                 FileUtilities.copy_file(
-                        new FileInputStream(getContentResolver().openFileDescriptor(uri, "r").getFileDescriptor()).getChannel(),
-                        new FileOutputStream(this.getDatabasePath(DatabaseOpenHelper.getDbName())).getChannel()
+                    new FileInputStream(getContentResolver().openFileDescriptor(uri, "r").getFileDescriptor()).getChannel(),
+                    new FileOutputStream(this.getDatabasePath(DatabaseOpenHelper.getDbName())).getChannel()
                 );
                 ShowsProvider.reloadDatabase(this);
                 android.os.AsyncTask.execute(() -> Glide.get(getApplicationContext()).clearDiskCache());
