@@ -11,10 +11,10 @@ def getCommitId = { ->
 
 android {
     namespace 'com.redcoracle.episodes'
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 22
         versionName "0.15.0"
         buildConfigField "String", "TVDB_KEY", "\"E457AE7B767BC9F4\""
