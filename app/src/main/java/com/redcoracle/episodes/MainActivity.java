@@ -142,35 +142,43 @@ public class MainActivity
     }
 
     private void back_up() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("application/x-sqlite3");
-            intent.putExtra(Intent.EXTRA_TITLE, FileUtilities.get_suggested_filename());
-            startActivityForResult(intent, WRITE_REQUEST_CODE);
-        } else {
-            // For now, keep the existing functionality on pre-API19
-            if (hasStoragePermission()) {
-                new AsyncTask().executeAsync(new BackupTask(FileUtilities.get_suggested_filename()));
+        try {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType("application/x-sqlite3");
+                intent.putExtra(Intent.EXTRA_TITLE, FileUtilities.get_suggested_filename());
+                startActivityForResult(intent, WRITE_REQUEST_CODE);
+            } else {
+                // For now, keep the existing functionality on pre-API19
+                if (hasStoragePermission()) {
+                    new AsyncTask().executeAsync(new BackupTask(FileUtilities.get_suggested_filename()));
+                }
             }
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
     }
 
     private void restore() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("application/x-sqlite3");
-            // On API 31 the file was not selectable without this
-            intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"application/octet-stream"});
-            startActivityForResult(intent, READ_REQUEST_CODE);
-        } else {
-            // For now, keep the existing functionality on pre-API19
-            if (hasStoragePermission()) {
-                final FragmentManager fm = getSupportFragmentManager();
-                final SelectBackupDialog dialog = new SelectBackupDialog();
-                dialog.show(fm, "select_backup_dialog");
+        try {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType("application/x-sqlite3");
+                // On API 31 the file was not selectable without this
+                intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"application/octet-stream"});
+                startActivityForResult(intent, READ_REQUEST_CODE);
+            } else {
+                // For now, keep the existing functionality on pre-API19
+                if (hasStoragePermission()) {
+                    final FragmentManager fm = getSupportFragmentManager();
+                    final SelectBackupDialog dialog = new SelectBackupDialog();
+                    dialog.show(fm, "select_backup_dialog");
+                }
             }
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
     }
 
