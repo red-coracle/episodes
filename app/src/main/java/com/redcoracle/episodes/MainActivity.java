@@ -186,7 +186,8 @@ public class MainActivity
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
-            if (requestCode == WRITE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            if (requestCode == WRITE_REQUEST_CODE && resultCode == Activity.RESULT_OK
+                    && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 FileUtilities.copy_file(
                     new FileInputStream(this.getDatabasePath(DatabaseOpenHelper.getDbName())).getChannel(),
@@ -197,7 +198,8 @@ public class MainActivity
                     String.format(this.getString(R.string.back_up_success_message), FileUtilities.uri_to_filename(this, uri)),
                     Toast.LENGTH_LONG
                 ).show();
-            } else if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            } else if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK
+                           && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 FileUtilities.copy_file(
                     new FileInputStream(getContentResolver().openFileDescriptor(uri, "r").getFileDescriptor()).getChannel(),
