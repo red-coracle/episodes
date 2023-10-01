@@ -149,6 +149,7 @@ public class MainActivity
                 intent.setType("application/x-sqlite3");
                 intent.putExtra(Intent.EXTRA_TITLE, FileUtilities.get_suggested_filename());
                 startActivityForResult(intent, WRITE_REQUEST_CODE);
+                Toast.makeText(this, this.getString(R.string.back_up_started_message), Toast.LENGTH_LONG).show();
             } else {
                 // For now, keep the existing functionality on pre-API19
                 if (hasStoragePermission()) {
@@ -169,6 +170,7 @@ public class MainActivity
                 // On API 31 the file was not selectable without this
                 intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"application/octet-stream"});
                 startActivityForResult(intent, READ_REQUEST_CODE);
+                Toast.makeText(this, this.getString(R.string.restore_started_message), Toast.LENGTH_LONG).show();
             } else {
                 // For now, keep the existing functionality on pre-API19
                 if (hasStoragePermission()) {

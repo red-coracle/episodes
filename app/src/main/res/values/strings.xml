@@ -8,6 +8,7 @@
   <string name="app_name" translatable="false">Episodes</string>
   <string name="adding_show">Adding %s to library</string>
   <string name="back_up_error_message">Could not back up library</string>
+  <string name="back_up_started_message">Back-up process started</string>
   <string name="back_up_success_message">Back-up complete: \'%s\'</string>
   <string name="error_adding_show">Could not add %s to library</string>
   <string name="first_aired">First Aired: %s</string>
@@ -44,6 +45,7 @@
   <string name="restore_dialog_no_backups_message">No backups found in \'%s\' folder.</string>
   <string name="restore_dialog_title">Restore from backup</string>
   <string name="restore_error_message">Could not restore library</string>
+  <string name="restore_started_message">Restore process started</string>
   <string name="restore_success_message">Library restored</string>
   <string name="season_episode_prefix">"%1$02dx%2$02d - "</string>
   <string name="season_name">Season %d</string>
