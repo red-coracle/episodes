@@ -136,10 +136,10 @@ public class ShowActivity
 
 		final MenuItem toggleArchived = menu.findItem(R.id.menu_toggle_show_archived);
 		if (isShowArchived) {
-			toggleArchived.setIcon(R.drawable.ic_shows_list_archived);
+			toggleArchived.setIcon(R.drawable.ic_show_archived);
 			toggleArchived.setTitle(R.string.menu_unarchive_show);
 		} else {
-			toggleArchived.setIcon(R.drawable.ic_shows_list_unarchived);
+			toggleArchived.setIcon(R.drawable.ic_show_unarchived);
 			toggleArchived.setTitle(R.string.menu_archive_show);
 		}
 

@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
   <item
       android:state_checked="true"
-      android:drawable="@drawable/ic_shows_list_starred" />
+      android:drawable="@drawable/ic_show_starred" />
   <item
       android:state_checked="false"
-      android:drawable="@drawable/ic_shows_list_unstarred" />
+      android:drawable="@drawable/ic_show_unstarred" />
 </selector>

@@ -9,7 +9,7 @@
       episodes:showAsAction="ifRoom" />
   <item
       android:id="@+id/menu_toggle_show_archived"
-      android:icon="@drawable/ic_shows_list_unarchived"
+      android:icon="@drawable/ic_show_unarchived"
       android:title="@string/menu_archive_show"
       episodes:showAsAction="ifRoom" />
   <item
