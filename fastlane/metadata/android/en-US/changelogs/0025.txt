@@ -1,0 +1,2 @@
+- Fix sorting in shows list
+- Update star/archive icons to improve visibility
