@@ -1,5 +1,5 @@
 # Episodes
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/red-coracle/episodes/Android%20CI/master?style=flat-square)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/red-coracle/episodes/android.yml?branch=master&style=flat-square)](https://github.com/red-coracle/episodes/actions/workflows/android.yml)
 [![Translation status](https://img.shields.io/weblate/progress/episodes?style=flat-square)](https://hosted.weblate.org/engage/episodes/)
 [![F-Droid Version](https://img.shields.io/f-droid/v/com.redcoracle.episodes?style=flat-square&color=%235183C0)](https://f-droid.org/en/packages/com.redcoracle.episodes)
 
