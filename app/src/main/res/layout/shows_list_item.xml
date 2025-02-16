@@ -36,8 +36,8 @@
   </FrameLayout>
   <ToggleButton
       android:id="@+id/show_starred_toggle"
-      android:layout_width="32dp"
-      android:layout_height="32dp"
+      android:layout_width="28dp"
+      android:layout_height="28dp"
       android:textOn=""
       android:textOff=""
       android:background="@drawable/starred_toggle"
@@ -46,8 +46,8 @@
       android:layout_alignParentRight="true" />
   <ToggleButton
       android:id="@+id/show_archived_toggle"
-      android:layout_width="32dp"
-      android:layout_height="32dp"
+      android:layout_width="28dp"
+      android:layout_height="28dp"
       android:layout_marginRight="32dp"
       android:textOn=""
       android:textOff=""
